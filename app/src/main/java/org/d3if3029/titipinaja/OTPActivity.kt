@@ -6,25 +6,29 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
+import java.security.AuthProvider
 import java.util.concurrent.TimeUnit
 
 class OTPActivity : AppCompatActivity() {
 
-    var binding : ActivityOTPBinding? = null
+    private var binding : ActivityOtpBinding? = null
     var verificationId:String? = null
     var auth:FirebaseAuth? = null
-    var dialog : ProgressDialog? = null
+    var dialog : ProgressDialog = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityOTPBinding.inflate(layoutInflater)
+        binding = ActivityOtpBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
+
         dialog = ProgressDialog(this@OTPActivity)
         dialog!!.setMessage("Sending OTP...")
         dialog!!.setCancelable(false)
         dialog!!.show()
         auth = FirebaseAuth.getInstance()
-        supportActionBar!!.hide()
+        supportActionBar?.hide()
         val phoneNumber = intent.getStringExtra("phoneNumber")
         binding!!.phoneLble.text = "Verify $phoneNumber"
 
@@ -32,10 +36,15 @@ class OTPActivity : AppCompatActivity() {
             .setPhoneNumber(phoneNumber!!)
             .setTimeout(60L, TimeUnit.SECONDS)
             .setActivity(this@OTPActivity)
-            .setCallBacks(object : PhoneAuthProvider.OnVerificationStateChangeCallbacks() {
+            .setCallBacks(object : AuthProvider.OnVerificationStateChangedCallbaks() {
                 override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                     TODO("Not yet implemented")
                 }
+
+                override fun onVerificationFailed(p0: FirebaseException) {
+                    TODO("Not yet implemented")
+                }
+
                 override fun onCodeSent(
                     verifyId: String,
                     forceResendingToken: PhoneAuthProvider.ForceResendingToken) {
@@ -51,7 +60,7 @@ class OTPActivity : AppCompatActivity() {
             }).build()
 
         PhoneAuthProvider.verifyPhoneNumber(options)
-        binding!!.otpView.setOtoCompletionListener { otp ->
+        binding!!.otpView.setOtpCompletionListener { otp ->
             val credential = PhoneAuthProvider.getCredential(verificationId!!.otp)
             auth.sigInwithCredential(credential)
                 .addOnCompleteListener { task ->

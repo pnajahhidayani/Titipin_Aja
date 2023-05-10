@@ -9,7 +9,7 @@
     android:layout_gravity="center"
     android:background="#ffff"
     android:gravity="center_horizontal"
-    tools:context=".VerificationActivity">
+    tools:context="org.d3if3029.titipinaja.VerificationActivity">
 
     <ImageView
         android:src="@drawable/verif"

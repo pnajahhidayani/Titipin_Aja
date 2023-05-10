@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211248489050",
+    "project_id": "titipinaja-927ec",
+    "storage_bucket": "titipinaja-927ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211248489050:android:28bc88e11f1e352ff3ae63",
+        "android_client_info": {
+          "package_name": "org.d3if3029.titipinaja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211248489050-iomvgdk2jh9le74v5ndiro39p4aoibml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApyA_HrSd6tL1xhfCD6mQ6o2D7JZbgHzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211248489050-iomvgdk2jh9le74v5ndiro39p4aoibml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

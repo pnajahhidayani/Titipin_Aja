@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class VerificationActivity : AppCompatActivity() {
+    var binding = activityVerificationBinding? = null
 
-    var binding : ActivityVerificationBinding? = null
-
-
-    var auth:FirebaseAuth? = null
-
+    var auth : FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +20,12 @@ class VerificationActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        supportActionBar!!.hide()
+        supportActionBar?.hide()
         binding!!.editNumber.requestFocus()
         binding!!.continueBtn.setOnClickListener {
-            val intent = Intent (this@VerificationActivity, OTPActivity::class.java)
-            intent.putExtra("phoneNumber", binding!!.editNumber.text.toString()
+            val intent = Intent (this@VerificationActivity,
+                OTPActivity::class.java)
+            intent.putExtra("phoneNumber", binding!!.editNumber.text.toString())
             startActivity(intent))
         }
     }
