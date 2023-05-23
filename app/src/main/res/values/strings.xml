@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TitipinAja</string>
     <string name="we_will_send_you_an">We will send you an</string>
+    <string name="nama">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="jastiper">Jastiper</string>
+    <string name="user">User</string>
 </resources>
