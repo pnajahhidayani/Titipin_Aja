@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,6 @@
     android:background="@color/background"
     android:gravity="center"
     android:orientation="vertical">
-    <!--    tools:context=".ui.loginUser.LoginFragment"-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="REGISTRASI"
+        android:text="SIGN UP"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12pt"
@@ -26,23 +26,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nama_hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="70dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nama_inp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nama" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_hint"
         android:layout_width="match_parent"
@@ -75,34 +58,15 @@
             android:hint="@string/password" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="70dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tinggiEditText"
-        app:layout_constraintTop_toBottomOf="@+id/tinggiEditText">
-
-        <RadioButton
-            android:id="@+id/priaRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/jastiper"
-            android:textColor="@color/white" />
-
-        <RadioButton
-            android:id="@+id/wanitaRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/user"
-            android:textColor="@color/white" />
-    </RadioGroup>
+    <Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/submit"
+    app:iconTint="@color/white"
+    android:backgroundTint="@color/white"
+    android:textColor="@color/black"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -116,20 +80,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/submit"
-        app:iconTint="@color/white"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"/>
-
     <ImageView
         android:layout_width="250dp"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
         android:maxWidth="@android:dimen/app_icon_size"
         app:srcCompat="@drawable/LOGO" />
 

@@ -6,4 +6,5 @@
     <string name="password">Password</string>
     <string name="jastiper">Jastiper</string>
     <string name="user">User</string>
+    <string name="submit">Submit</string>
 </resources>
