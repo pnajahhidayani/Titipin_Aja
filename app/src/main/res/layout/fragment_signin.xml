@@ -84,8 +84,8 @@
         android:layout_width="250dp"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="90dp"
         android:maxWidth="@android:dimen/app_icon_size"
-        app:srcCompat="@drawable/LOGO" />
+        app:srcCompat="@drawable/logofix" />
 
 </LinearLayout>

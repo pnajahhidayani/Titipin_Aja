@@ -131,6 +131,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:maxWidth="@android:dimen/app_icon_size"
-        app:srcCompat="@drawable/LOGO" />
+        app:srcCompat="@drawable/logofix" />
 
 </LinearLayout>
