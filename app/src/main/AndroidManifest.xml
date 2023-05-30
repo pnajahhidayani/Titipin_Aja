@@ -11,21 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TitipinAja"
         tools:targetApi="31">
-        <activity
-            android:name=".SetupProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OTPActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VerificationActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".SetupProfileActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".OTPActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".VerificationActivity"-->
+<!--            android:exported="false" />-->
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--        </intent-filter>-->
 
         <activity
             android:name=".MainActivity"
