@@ -127,12 +127,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
+                        android:background="@drawable/button_black_background"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         >
-<!--                        android:background="@drawable/button_black_background"-->
-
                         <ImageButton
                             android:id="@+id/images_grid_view_btn"
                             android:layout_width="1dp"
