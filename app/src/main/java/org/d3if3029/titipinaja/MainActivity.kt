@@ -3,6 +3,7 @@ package org.d3if3029.titipinaja
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import org.d3if3029.titipinaja.fragments.ChatFragment
 import org.d3if3029.titipinaja.fragments.HomeFragment
 import org.d3if3029.titipinaja.fragments.ProfileFragment
 import org.d3if3029.titipinaja.fragments.SearchFragment
@@ -10,18 +11,22 @@ import org.d3if3029.titipinaja.fragments.SearchFragment
 class MainActivity : AppCompatActivity() {
 
     internal var selectedFragment: Fragment? = null
-
     private val onNavigationItemSelectedListener = ButtomNavigationView.OnNavigationItemSelectedListener { item->
         when (item.itemId) {
-
             R.id.nav_home -> {
-               selectedFragment = HomeFragment()
+                moveToFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener
+                true
             }
             R.id.nav_chat -> {
-                selectedFragment = SearchFragment()
+                moveToFragment(ChatFragment())
+                return@OnNavigationItemSelectedListener
+                true
             }
             R.id.nav_search -> {
-                selectedFragment = ChatFragment()
+                moveToFragment(SearchFragment())
+                return@OnNavigationItemSelectedListener
+                true
             }
             R.id.nav_add_post -> {
                 return@OnNavigationItemSelectedListener
@@ -32,14 +37,10 @@ class MainActivity : AppCompatActivity() {
 //                true
 //            }
             R.id.nav_profile -> {
-                selectedFragment = ProfileFragment()
+                moveToFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener
+                true
             }
-        }
-        if(selectedFragment != null) {
-            supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container,
-                selectedFragment!!
-            ).commit()
         }
         false
     }
@@ -51,9 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            HomeFragment()
-        ).commit()
+        moveToFragment(HomeFragment())
+    }
+
+    private fun moveToFragment (fragment: Fragment) {
+        val fragmentTrans = supportFragmentManager.beginTransaction()
+        fragmentTrans.replace(R.id.fragment_container, fragment)
+        fragmentTrans.commit()
     }
 }

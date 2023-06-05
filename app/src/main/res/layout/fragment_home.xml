@@ -27,7 +27,6 @@
                     android:src="@drawable/logofix"
                     android:layout_alignParentBottom="true"/>
 
-
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

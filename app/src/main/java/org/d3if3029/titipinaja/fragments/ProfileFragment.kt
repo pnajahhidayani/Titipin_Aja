@@ -1,10 +1,12 @@
 package org.d3if3029.titipinaja.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.d3if3029.titipinaja.AccountActivity
 import org.d3if3029.titipinaja.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +37,13 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+        view.edit_account_settings_btn.setOnClickListener {
+            startActivity(Intent(context, AccountActivity::class.java))
+        }
+
+        return view
     }
 
     companion object {
