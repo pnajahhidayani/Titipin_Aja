@@ -96,7 +96,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="26dp"
         android:backgroundTint="@color/white"
-        android:text="Belum Punya Akun? Sign up"
+        android:text="Sudah Punya Akun? Sign In"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="17dp"
